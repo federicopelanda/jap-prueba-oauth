@@ -22,8 +22,7 @@
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
         
-        localStorage.setItem('user', aaaaaa);
-        location.href="youtube.com"
+        localStorage.setItem('user', "aaaaaa");
       }
     </script>
   </body>
@@ -35,5 +34,16 @@
       console.log('User signed out.');
     });
   }
+  
+  document.addEventListener('DOMContentLoaded',()=>{
+
+    let usuario = JSON.parse(localStorage.getItem('user'));
+
+    if(usuario == null){
+        alert("Es necesario iniciar sesión.");
+        
+    } else {
+        document.getElementById('usuario');
+    }
 </script>
 </html>
